@@ -1,25 +1,16 @@
-import random as rd
-class Player:
+class player():
     def __init__(self):
-        self.guesses = rd.randint(1, 13)
-        self.card_of_player = 0
-        self.score = 0
+        self.points = 300
+        self.keep_playing = True
+        self.input = str
+        self.player_input = str
+
+    def high_low(self):
+        self.input = input("Higher or Lower? [h/l] ")
+        return
     
-    def choosing_h_l(self, h_l):
-        if self.guesses < self.card_of_player and h_l == "l":
-            self.score += 100
-        elif self.guesses > self.card_of_player and h_l == "h":
-            self.score += 100
-        elif self.guesses > self.card_of_player and h_l == "l":
-            self.score-= 75
-        elif self.guesses < self.card_of_player and h_l == "h":
-            self.score-= 75
-        else:
-            self.score = 0            
-        return self.score    
+    def play_more(self):
+        self.player_input = input("Keepd playing? [y/n] ")
+        return (self.player_input == "y")
 
-
-
-
-
-Player()
+    
