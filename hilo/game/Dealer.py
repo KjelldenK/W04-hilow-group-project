@@ -1,6 +1,6 @@
 
 import random
-from Player import player
+from game.Player import player
 
 class dealer():
     def __init__(self):
@@ -47,12 +47,12 @@ class dealer():
             if self.card1 <= self.card2:
                 self.player.points += 100
             else:
-                self.player.points += -70
+                self.player.points += -75
         elif self.player.input == "l":
             if self.card1 >= self.card2:
                 self.player.points += 100
             else:
-                self.player.points += -300
+                self.player.points += -75
         print(self.player.points)
             
 
@@ -68,5 +68,3 @@ class dealer():
 
 
 
-dealer = dealer()
-dealer.game()
