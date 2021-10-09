@@ -1,7 +1,6 @@
 
 import random
 from game.Player import player
-
  
 # The Dealer class takes care of things that the deal would handle in a real card game. 
 # It will take care of keeping track of the deck and whats in the discord. 
